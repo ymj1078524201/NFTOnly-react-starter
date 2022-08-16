@@ -18,6 +18,11 @@ import Discord2Icon from 'src/assets/image/discord-white.svg'
 import Twitter2Icon from 'src/assets/image/twitter-white.svg'
 import Ins2Icon from 'src/assets/image/ins-white.svg'
 
+import MemberIcon1 from 'src/assets/image/member4.png'
+import MemberIcon2 from 'src/assets/image/member5.png'
+import MemberIcon3 from 'src/assets/image/member6.png'
+
+
 const cx = classNames.bind(styles);
 
 export default function NFTOnly() {
@@ -41,7 +46,7 @@ const Header = () => {
 
 const Main = () => {
     return <div className={cx('main-container')}>
-        <ContentPage className={cx('full-screen')}>
+        <ContentPage>
             <MainContent />
         </ContentPage>
         <ContentPage>
@@ -59,7 +64,7 @@ const MainContent = () => {
             <h2 className={cx('left-caption')}>inspire Web3 lifestyle for all</h2>
             <p className={cx('left-subtitle')}>NFTOnly is the world's first NFT copyright circulation and commercial value realization protocol. Let NFT enter the WEB2 field to gain a larger market.</p>
           <div className={cx('left-button-area')}>
-            <div className=''>
+            <div>
                 <MagicButton>LITEPAPER</MagicButton>
             </div>
             <div className={cx('btn-group')}>
@@ -68,6 +73,7 @@ const MainContent = () => {
                 <a href="https://www.instagram.com/nftonly.app/" target='_blank' rel="noreferrer"><LinkIcon  href="https://www.instagram.com/nftonly.app/" src={Ins1Icon}  className={cx('left-icon')} /></a>
             </div>
           </div>
+          <Leftmember className="web" />
         </div>
         <div className={cx('right-content')}>
              <div
@@ -324,7 +330,21 @@ const Accordion = () => {
       </li>
     );
   };
-
+  const Leftmember = ({ className }) => {
+    return (
+      <div className={cx('body-left-member', className)}>
+        <div className={cx('body-iamge-area')}>
+          <ImgContainer className={cx('avatar')} src={MemberIcon1}/>
+          <ImgContainer className={cx('avatar')} src={MemberIcon2}/>
+          <ImgContainer className={cx('avatar')} src={MemberIcon3}/>
+        </div>
+        <div className={cx('avatar-content')}>
+          <div className={cx('body-user-number')}>100+</div>
+          <div className={cx('body-user-info')}>NFT Collection</div>
+        </div>
+      </div>
+    );
+  };
 
 const Tooltip = ({
     title,

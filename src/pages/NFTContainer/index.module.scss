@@ -136,9 +136,6 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    .full-screen {
-        min-height: 100vh;
-    }
 }
 
 .main-content {
@@ -148,12 +145,14 @@ header {
     width: 100%;
     .left-content {
         width: 50%;
+        flex: 1;
         gap: 18px;
         display: flex;
         flex-direction: column;
         @media screen and (min-width:750px) and (max-width:1280px) {
             width: 70%;
             align-items: center;
+            margin-top: 150px;
         }
         @media screen and (max-width:750px) {
             width: 100%;
@@ -506,9 +505,56 @@ footer {
       }
   }
   
-
+.body-left-member {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 88px;
+    .body-iamge-area {
+        display: flex;
+    }
+    .avatar-content {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      .body-user-number {
+        font-family: 'Lexend Exa';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 32px;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+      .body-user-info {
+        font-family: 'Lexend Exa';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.6);
+        opacity: 0.6;
+        letter-spacing: -1.44px;
+      }
+    }
+    .avatar {
+        width: 68px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: -30px;
+        background-size: cover;
+        box-sizing: border-box;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
+      }
+  }
+  
 @media screen and (max-width:750px) {
     .page {
+        width: 750px;
         header {
             display: none;
         }
@@ -527,5 +573,7 @@ footer {
 }
 
 @media screen and (min-width:1920px) {
-    
+    .page {
+        zoom: calc(100vw / 1920);
+    }
 }
