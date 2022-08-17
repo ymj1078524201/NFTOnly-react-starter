@@ -1,0 +1,43 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    cursor: pointer;
+    text-transform: uppercase;
+    user-select: none;
+    &:hover {
+        color: #af9fff;
+    }
+    &:active {
+    color: #c8bdff;
+    }
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0 18px;
+    &:hover {
+        background-color: rgba($color: #fff, $alpha: 0.5)
+        
+    }
+    &-left {
+        align-items: flex-start;
+        display: flex;
+        align-items: center;
+    }
+}
